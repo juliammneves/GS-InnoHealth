@@ -1,0 +1,167 @@
+.login-page {
+   .cic-verde {
+      height: 100%;
+      width: 100%;
+      background: radial-gradient(circle 900px at left 600px, #346C8B 0%, #4fac7000 70%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+   }
+
+   .cic-azul {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      background: radial-gradient(circle 800px at right 500px, #346C8B 0%, #4fac7000 100%);
+   }
+
+   .login {
+      background: rgba(255, 255, 255, 0.22);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(4.8px);
+      -webkit-backdrop-filter: blur(4.8px);
+      border: 1px solid rgba(255, 255, 255, 0.31);
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 60rem;
+      width: 100%;
+      height: 30rem;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .col-2 {
+         display: flex;
+         flex-direction: column;
+         width: 296px;
+         position: relative;
+
+         form {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+
+            .input-field {
+               height: 50px;
+               display: flex;
+               padding: 1.5rem 1.35rem 0.5rem 1.35rem;
+               align-items: center;
+               position: relative;
+               transition: all .3s ease-in-out;
+
+               background: rgba(255, 255, 255, 0.22);
+               border-radius: 8px;
+               box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+               backdrop-filter: blur(4.8px);
+               -webkit-backdrop-filter: blur(4.8px);
+               border: 1px solid rgba(255, 255, 255, 0.31);
+
+               label {
+                  position: absolute;
+                  left: calc(1.35rem + 2px);
+                  font-weight: 600;
+                  pointer-events: none;
+                  transition: all 0.3s;
+               }
+
+               input {
+                  background: none;
+                  border: none;
+                  outline: none;
+                  font-size: 16px;
+                  font-weight: 600;
+
+                  &::placeholder {
+                     color: transparent;
+                  }
+
+                  &:not(:placeholder-shown)~label {
+                     font-size: .66rem;
+                     transform: translateY(-120%);
+                  }
+               }
+
+               &:not(:empty) label {
+                  font-size: 1rem;
+                  transition: all 0.3s ease-in-out;
+                  transform: translateY(-35%);
+                  color: gray;
+               }
+
+               &:not(:empty) .icon {
+                  color: gray;
+               }
+
+               &:focus-within label {
+                  color: #4FAC6F;
+                  font-size: .66rem;
+                  letter-spacing: 3px;
+                  transform: translateY(-120%);
+               }
+            }
+
+            button {
+               border: none;
+               background: #4FAC6F;
+               padding: 5px 25px;
+               font-weight: 500;
+               color: #F9FAFB;
+               border-radius: 5px;
+               cursor: pointer;
+               transition: all .3s ease-in-out;
+               font-size: 18px;
+
+               &:hover {
+                  padding: 5px 30px;
+                  box-shadow:
+                     0 32px 32px rgba(27, 27, 27, .1),
+                     0 16px 16px rgba(27, 27, 27, .1),
+                     0 8px 8px rgba(27, 27, 27, .1),
+                     0 4px 4px rgba(27, 27, 27, .1),
+                     0 2px 2px rgba(27, 27, 27, .1);
+               }
+            }
+         }
+      }
+
+      @media (max-width: 1000px) {
+         margin-top: 5%;
+         width: 500px;
+         justify-content: center;
+         align-items: center;
+
+         .logo{
+            display: none;
+         }
+      }
+
+      @media (max-width: 555px) {
+         width: 90%;
+
+         .col-2 {
+            width: 100%;
+   
+            form {
+               .input-field {
+                  width: 100%;
+
+                  input{
+                     width: 100%;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

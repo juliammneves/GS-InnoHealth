@@ -1,0 +1,159 @@
+header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+   z-index: 100;
+   margin-bottom: 20px;
+
+   .logo {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      img {
+         height: 40px;
+      }
+
+      p {
+         font-weight: 700;
+         font-size: 24px;
+         background: linear-gradient(to right, #459b63, #346C8B);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+      }
+   }
+
+   .logado {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+   }
+
+   button {
+      border: none;
+      background: #4FAC6F;
+      padding: 5px 25px;
+      font-weight: 600;
+      color: #F9FAFB;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+
+      &:hover {
+         padding: 5px 30px;
+         box-shadow:
+            0 32px 32px rgba(27, 27, 27, .1),
+            0 16px 16px rgba(27, 27, 27, .1),
+            0 8px 8px rgba(27, 27, 27, .1),
+            0 4px 4px rgba(27, 27, 27, .1),
+            0 2px 2px rgba(27, 27, 27, .1);
+      }
+   }
+
+   .menu_mobile {
+      display: none;
+
+      .icon {
+         font-size: 20px;
+         cursor: pointer;
+         z-index: 100;
+         color: #F9FAFB;
+      }
+
+      .menu1 {
+         opacity: 0;
+         top: 5rem;
+         right: 38%;
+         height: 30rem;
+         transform: translateX(65%);
+         pointer-events: none;
+         position: fixed;
+         transition: all 0.2s ease-in-out;
+         z-index: 20;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-between;
+
+
+
+         .box {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+         }
+
+
+         &.open {
+            display: flex;
+            opacity: 1;
+            pointer-events: all;
+            color: #F9FAFB;
+            text-align: right;
+         }
+
+         ul {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+
+            button {
+               width: 100%;
+            }
+         }
+
+         li {
+            display: flex;
+
+            a {
+               font-size: 22px;
+               text-decoration: none;
+               color: #F9FAFB;
+            }
+         }
+      }
+
+      .bg-menu_mobile.show:before {
+         transform: scale(25);
+      }
+
+      .bg-menu_mobile::before {
+         content: "";
+         position: fixed;
+         background: #346d8b;
+         height: 100vh;
+         width: 5%;
+         transform: scale(0);
+         transform-origin: 50% 50%;
+         transition: transform 0.3s ease-out;
+
+      }
+   }
+
+   @media (max-width: 800px) {
+      .logo {
+         gap: 12px;
+
+         img {
+            height: 35px;
+         }
+
+         p {
+            font-size: 21px;
+         }
+
+      }
+
+      .logado {
+         display: none;
+      }
+
+      .menu_mobile {
+         display: flex;
+      }
+   }
+
+
+}

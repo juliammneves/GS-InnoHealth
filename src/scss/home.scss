@@ -6,33 +6,23 @@
    position: relatve;
 
    .cic1 {
-      height: 128rem;
+      height: 100%;
       width: 100%;
       background: radial-gradient(circle 2000px at left 900px, #346C8B 0%, #4fac7000 70%);
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       z-index: -1;
    }
 
    .cic2 {
-      height: 128rem;
+      height: 100%;
       width: 100%;
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       z-index: -1;
       background: radial-gradient(circle 800px at right 500px, #346C8B 0%, #4fac7000 100%);
-   }
-
-   .cic3 {
-      height: 128rem;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: -1;
-      background: radial-gradient(circle 1000px at right 2000px, #346C8B 0%, #4fac7000 100%);
    }
 
    .fundo {
@@ -401,24 +391,13 @@
       display: flex;
       width: 100%;
       justify-content: space-between;
+      margin-bottom: 50px;
    }
 
    @media (max-width: 1050px) {
       grid-template-rows: 15rem 15rem 23rem 42rem;
       gap: 30px;
       height: 100%;
-
-      .cic1 {
-         height: 120rem;
-      }
-
-      .cic2 {
-         height: 120rem;
-      }
-
-      .cic3 {
-         height: 120rem;
-      }
 
       .fundo {
          .produtos {
@@ -607,19 +586,6 @@
       grid-template-rows: 15rem 15rem 15rem 40.5rem;
       gap: 30px;
       height: 100%;
-
-      .cic1 {
-         height: 160rem;
-      }
-
-      .cic2 {
-         height: 160rem;
-      }
-
-      .cic3 {
-         height: 160rem;
-         background: radial-gradient(circle 1000px at right 2000px, #346C8B 0%, #4fac7000 100%);
-      }
 
       .fundo {
          grid-column-start: 1;
@@ -856,17 +822,8 @@
 
       .cic1 {
          background: radial-gradient(circle 2000px at left 2000px, #346C8B 0%, #4fac7000 70%);
-         height: 248rem;
       }
 
-      .cic2 {
-         height: 248rem;
-      }
-
-      .cic3 {
-         background: radial-gradient(circle 1500px at right 4000px, #346C8B 0%, #4fac7000 100%);
-         height: 248rem;
-      }
 
       .fundo {
          order: -2;

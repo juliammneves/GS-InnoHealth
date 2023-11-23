@@ -7,10 +7,16 @@
          "senha":"12345"
       },
       {
-         "id":"1",
+         "id":"2",
          "nome":"Funcionario",
          "email":"funcionario@gmail.com",
          "senha":"123456"
+      },
+      {
+         "id":"3",
+         "nome":"Visitante",
+         "email":"visitante@gmail.com",
+         "senha":"12345"
       }
    ]
 }

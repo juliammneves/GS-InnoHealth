@@ -1,8 +1,31 @@
-# React + Vite
+# Integrantes
+Júlia Marques - RM98680
+Matheus Gusmão - RM550
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Informações de acesso
+Abaixo estão as instruções detalhadas para efetuar o login, incluindo os nomes de usuário correspondentes e senhas associadas.
 
-Currently, two official plugins are available:
+## Informações de Acesso
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Administrador:
+Nome de Usuário: Admin
+Senha: 12345
+
+2. Funcionário:
+Nome de Usuário: Funcionario
+Senha: 123456
+
+3. Visitante:
+Nome de Usuário: Visitante
+Senha: 12345
+
+## Passo a Passo para Efetuar o Login
+Na tela Login:
+
+1. Insira o nome de usuário que preferir no campo "Usuário".
+
+2. Digite a senha associada ao nome de usuário inserido no campo "Senha".
+
+3. Clique no botão "Entrar" para acessar o site.
+
+obs: Todos os usuarios tem o mesmo tipo de acesso.

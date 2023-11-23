@@ -56,18 +56,20 @@ function Mais() {
                   <p>Em emergencias ou caso o botão for pressionado</p>
                </div>
             </section>
+
             <section className="dados4">
-               <div className="box">
+               <div className="box b1">
                   <p>Resistênte até</p>
                   <h2>30 metros</h2>
                   <p>De profundidade</p>
                </div>
-               <div className="box">
+               <div className="box b1">
                   <p>GPS com</p>
                   <h2>3 metros</h2>
                   <p>de precisão</p>
                </div>
             </section>
+            
          </main>
       </>
    )

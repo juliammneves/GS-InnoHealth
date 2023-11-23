@@ -16,7 +16,6 @@ function Home() {
       <main className='home'>
          <div className="cic1"></div>
          <div className="cic2"></div>
-         <div className="cic3"></div>
          <section className="fundo">
             <div className="produtos">
                <Spline scene="https://prod.spline.design/zXBFoJPmCOpCgtbl/scene.splinecode" />

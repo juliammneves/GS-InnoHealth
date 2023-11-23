@@ -1,8 +1,8 @@
 .cic1 {
-   height: 100%;
+   height: 100vh;
    width: 100%;
    background: radial-gradient(circle 1500px at left 900px, #346C8B 0%, #4fac7000 70%);
-   position: absolute;
+   position: fixed;
    top: 0;
    left: 0;
    z-index: -1;
@@ -11,11 +11,21 @@
 .cic2 {
    height: 100%;
    width: 100%;
-   position: absolute;
+   position: fixed;
    top: 0;
    right: 0;
    z-index: -1;
    background: radial-gradient(circle 1500px at right 400px, #346C8B 0%, #4fac7000 100%);
+}
+
+@media (max-width: 500px){
+   .cic1 {
+      background: radial-gradient(circle 1200px at left 900px, #346C8B 0%, #4fac7000 70%);
+   }
+   
+   .cic2 {
+      background: radial-gradient(circle 1000px at right 400px, #346C8B 0%, #4fac7000 100%);
+   }
 }
 
 .Mais {
@@ -111,7 +121,7 @@
       }
    }
 
-   .info-img{
+   .info-img {
       display: flex;
       padding: 8px;
       gap: 10px;
@@ -125,19 +135,19 @@
       -webkit-backdrop-filter: blur(4.8px);
       border: 1px solid rgba(255, 255, 255, 0.31);
 
-      p{
+      p {
          font-size: 12px;
       }
 
 
-      img{
+      img {
          width: 30%;
          object-fit: cover;
          border-radius: 10px;
       }
    }
 
-   .dados2{
+   .dados2 {
       position: relative;
       z-index: 2;
       grid-column: 3;
@@ -173,7 +183,7 @@
       }
    }
 
-   .dados3{
+   .dados3 {
       position: relative;
       z-index: 2;
       grid-column: 3;
@@ -209,7 +219,7 @@
       }
    }
 
-   .dados4{
+   .dados4 {
       position: relative;
       z-index: 2;
       grid-column: 3;
@@ -244,38 +254,298 @@
       }
    }
 
-   .dados5{
-      position: relative;
-      z-index: 2;
-      grid-column: 3;
-      grid-row: 4;
+   @media (max-width: 1050px) {
+      grid-template-columns: 1.8fr 2fr 1.8fr;
+      grid-template-rows: repeat(4, 6.5rem);
+      gap: 25px;
 
-      .box {
-         display: flex;
-         flex-direction: column;
-         justify-content: space-between;
-         position: relative;
-         text-align: right;
-
-         h2 {
-            font-size: 40px;
+      .descricao {
+         padding: 15px;
+         h1 {
+            font-size: 32px;
          }
 
          p {
             font-size: 14px;
-            font-weight: 500;
-            color: #ffffff5e;
+         }
+      }
+
+      .dados {
+         .box {
+            h2 {
+               font-size: 25px;
+            }
+   
+            &.b1 {
+               width: 80%;
+            }
+            &.b2 {
+               width: 100%;
+            }
+
+            &::after {
+               width: 40px;
+               height: 3px;
+            }
+         }
+      }
+
+      .dados2 {
+         .box {
+            h2 {
+               font-size: 25px;
+            }
+
+            &::after {
+               bottom: -8px;
+               width: 40px;
+               height: 3px;
+            }
+         }
+      }
+
+      .dados3 {
+         .box {
+            h2 {
+               font-size: 25px;
+            }
+
+            &::after {
+               bottom: -8px;
+               width: 40px;
+               height: 3px;
+            }
+         }
+      }
+
+      .dados4 {
+         .box {
+            h2 {
+               font-size: 25px;
+            }
+
+            &::after {
+               bottom: 15px;
+               width: 40px;
+               height: 3px;
+            }
+         }
+      }
+   
+      .info-img {
+         padding: 8px;
+         gap: 6px;
+
+         p {
+            font-size: 12px;
+            line-height: 16px;
          }
 
-         &::after {
-            content: "";
-            position: absolute;
-            width: 50px;
-            height: 5px;
-            background-color: #ffffff5e;
-            bottom: -15px;
-            border-radius: 100px;
-            right: 0;
+         h4{
+            font-size: 14px;
+         }
+   
+         img {
+            width: 25%;
+         }
+      }
+   }
+
+   @media (max-width: 800px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 15rem auto auto auto;
+      column-gap: 30px;
+      row-gap: 50px;
+
+      .main-img {
+         grid-column: 1 / span 2;
+         canvas {
+            position: relative;
+         }
+      }
+
+      .descricao {
+         padding: 20px;
+         grid-column: 1 / span 2;
+         grid-row: 2 / span 2;
+
+         a{
+            display: none;
+         }
+
+         p {
+            font-size: 16px;
+         }
+      }
+
+      .dados {
+         grid-row: 5;
+         grid-column: 1 / span 2;
+         .box {
+            h2 {
+               font-size: 36px;
+            }
+
+            p{
+               font-size: 16px;
+               color: #ffffff5e;
+            }
+   
+            &.b1 {
+               width: 100%;
+            }
+            &.b2 {
+               width: 100%;
+            }
+
+            &::after {
+               background-color: #ffffff5e;
+               bottom: -10px;
+               width: 40px;
+               height: 5px;
+            }
+         }
+      }
+
+      .dados2 {
+         grid-column: 1;
+         grid-row: inherit;
+         .box {
+            text-align: left;
+            h2 {
+               font-size: 36px;
+            }
+
+            p{
+               font-size: 16px;
+            }
+
+            &::after {
+               left: 0;
+               bottom: -10px;
+               width: 40px;
+               height: 5px;
+            }
+         }
+      }
+
+      .dados3 {
+         grid-column: 2;
+         grid-row: inherit;
+         .box {
+            text-align: left;
+            h2 {
+               font-size: 36px;
+            }
+
+            p{
+               font-size: 16px;
+            }
+
+            &::after {
+               left: 0;
+               bottom: -10px;
+               width: 40px;
+               height: 5px;
+            }
+         }
+      }
+
+      .dados4 {
+         grid-row: inherit;
+         grid-column: 1 / span 2;
+         margin-bottom: 10%;
+         gap: 30px;
+         .box {
+            text-align: left;
+            h2 {
+               font-size: 36px;
+            }
+
+            p{
+               font-size: 16px;
+            }
+
+            &.b1 {
+               width: 100%;
+            }
+            &.b2 {
+               width: 100%;
+               text-align: left;
+            }
+
+            &::after {
+               left: 0;
+               bottom: -10px;
+               width: 40px;
+               height: 5px;
+            }
+         }
+      }
+   
+      .info-img {
+         grid-column: 1 / span 2;
+         grid-row: inherit;
+         padding: 15px;
+         gap: 15px;
+
+         p {
+            font-size: 16px;
+            line-height: normal;
+         }
+
+         h4{
+            font-size: 18px;
+         }
+      }
+   }
+
+   @media (max-width: 500px) {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .main-img {
+         order: -2;
+         height: 15rem !important;
+      }
+
+      .descricao {
+         order: -1;
+      }
+
+      .dados {
+         flex-direction: column;
+         gap: 50px;
+         margin-bottom: 20px
+      }
+
+      .dados2 {
+         margin-bottom: 20px;
+      }
+
+      .dados3 {
+         margin-bottom: 20px;
+      }
+
+      .dados4 {
+         flex-direction: column;
+         gap: 50px;
+         margin-bottom: 60px;
+      }
+   
+      .info-img {
+        order: -1;
+         padding: 15px;
+         gap: 15px;
+
+         p {
+            font-size: 16px;
+            line-height: normal;
+         }
+
+         h4{
+            font-size: 18px;
          }
       }
    }

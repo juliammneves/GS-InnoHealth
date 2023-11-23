@@ -66,7 +66,7 @@ function Login() {
                         value={usuario.usuario}
                         onChange={handleChange}
                         placeholder='Digite seu usuário' />
-                     <label>Usuario</label>
+                     <label>Usuário</label>
                   </div>
 
                   <div className='input-field'>

@@ -1,6 +1,6 @@
 # Integrantes
-Júlia Marques - RM98680
-Matheus Gusmão - RM550
+- Júlia Marques - RM98680
+- Matheus Gusmão - RM550
 
 # Informações de acesso
 Abaixo estão as instruções detalhadas para efetuar o login, incluindo os nomes de usuário correspondentes e senhas associadas.
